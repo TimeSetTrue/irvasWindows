@@ -14088,8 +14088,6 @@ const changeModalState = state => {
             state[prop] = item.value;
             break;
         }
-
-        console.log(state);
       });
     });
   }
@@ -14179,7 +14177,6 @@ const forms = state => {
       }
 
       postData('assets/server.php', formData).then(res => {
-        console.log(res);
         statusMessage.textContent = message.success;
       }).catch(() => statusMessage.textContent = message.failere).finally(() => {
         clearInputs();
